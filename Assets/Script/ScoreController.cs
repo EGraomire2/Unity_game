@@ -11,13 +11,14 @@ public class ScoreController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        score_total = 0;
         StartCoroutine(Update_Score());
     }
 
     // Update is called once per frame
     void Update()
     {
-        t.text = score_total.ToString();
+        //t.text = score_total.ToString();
     }
     IEnumerator Update_Score()
     {
