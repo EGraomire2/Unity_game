@@ -5,17 +5,14 @@ using UnityEngine.Timeline;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public float limit_y;
-    public float limit_x;
+    private float limit_y = 220;
+    private float limit_x = 450;
     public GameObject menu;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
       speed = 1000f;
-      limit_y = 220;
-      limit_x = 450;
-
     }
 
     // Update is called once per frame

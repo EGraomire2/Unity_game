@@ -4,13 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    public bool inMenu;
+    public bool inMenu = false;
     public GameObject menuPause;
     public GameObject gameOver;
 
     public void Start()
     {
-        inMenu = false;
+        this.inMenu = false;
+        gameOver.SetActive(false);
         menuPause.SetActive(false);
     }
 
@@ -19,8 +20,10 @@ public class MenuController : MonoBehaviour
         // Permet de mettre en pause avec Echap
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            inMenu = !inMenu;
-            menuPause.SetActive(inMenu);
+            print(this.inMenu);
+            this.inMenu = !inMenu;
+            print(this.inMenu);
+            menuPause.SetActive(this.inMenu);
         }
     }
 
@@ -44,8 +47,16 @@ public class MenuController : MonoBehaviour
         menuPause.SetActive(false);
     }
 
-    public void GameOver(){
-        inMenu = true;
+    public void GameOver()
+    {
+        this.inMenu = true;
+        //gameOver.SetActive(true);
         gameOver.SetActive(true);
+        //menuPause.SetActive(true);
+    }
+
+    public void StopGame()
+    {
+        Application.Quit();
     }
 }

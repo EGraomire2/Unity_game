@@ -3,13 +3,15 @@ using UnityEngine;
 public class BonusController : MonoBehaviour
 {
     public GameObject menuManager;
+    public GameObject score;
+    
     public float BonusVelocity;
     private float RealVelocity;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        this.BonusVelocity = 100f;
+        this.BonusVelocity = 500f;
         float randomSpeedness = UnityEngine.Random.value;
         RealVelocity = BonusVelocity + randomSpeedness * (BonusVelocity / 2);
     }
@@ -22,16 +24,15 @@ public class BonusController : MonoBehaviour
             // Move the asteroid
             this.transform.Translate(0, 0, - RealVelocity * Time.deltaTime, Space.World);
             
-            if (this.transform.position.z <= -200){
+            if (this.transform.position.z <= -300){
                 Destroy(this.gameObject);
             }
         }
     }
     private void OnCollisionEnter(Collision collision){
-        print("Collision");
         if (collision.gameObject.tag == "Player"){
-            print("game over");
-            menuManager.GetComponent<MenuController>().GameOver();
+            print("bonus");
+            score.GetComponent<ScoreController>().score_total += 200;
         }
     }
 }

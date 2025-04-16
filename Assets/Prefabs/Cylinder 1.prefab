@@ -124,4 +124,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuManager: {fileID: 498606177247116950, guid: fc7c6574aefb41b4eb93a263258f333f, type: 3}
-  BonusVelocity: 10
+  score: {fileID: 1309847032473906888, guid: 9f55f42da557fe740a28ec40ea025698, type: 3}
+  BonusVelocity: 1000

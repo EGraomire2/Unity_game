@@ -33,7 +33,7 @@ public class SpawnerBonus : MonoBehaviour
 
                 GameObject newBonus = null;
               
-                newBonus = Instantiate(bonus, new Vector3((randomPositionX - 0.5f) * 200, (randomPositionY - 0.5f) * 200, 300),
+                newBonus = Instantiate(bonus, new Vector3((randomPositionX - 0.5f) * 200, (randomPositionY - 0.5f) * 200, 1000),
                 Quaternion.Euler(90, 0, 0));
                     
                 newBonus.GetComponent<BonusController>().menuManager = menuManager;

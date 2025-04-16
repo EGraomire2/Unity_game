@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8876755003968109661}
   m_Layer: 0
   m_Name: asteroid_mod_03_low
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807157cb1a2ebb940970c0b05d01a947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuManager: {fileID: 0}
-  AsteroidVelocity: 100
-  AsteroidRotation: 10
+  menuManager: {fileID: 498606177247116950, guid: fc7c6574aefb41b4eb93a263258f333f, type: 3}
+  AsteroidVelocity: 1000
+  AsteroidRotation: 100
 --- !u!65 &8876755003968109661
 BoxCollider:
   m_ObjectHideFlags: 0

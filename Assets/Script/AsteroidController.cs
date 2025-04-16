@@ -31,7 +31,7 @@ public class AsteroidController : MonoBehaviour
             this.transform.Translate(0, 0, - RealVelocity * Time.deltaTime, Space.World);
             this.transform.Rotate(randomRotationX * AsteroidRotation * Time.deltaTime, randomRotationY * AsteroidRotation * Time.deltaTime, randomRotationZ * AsteroidRotation * Time.deltaTime);
             
-            if (this.transform.position.z <= -200){
+            if (this.transform.position.z <= -300){
                 Destroy(this.gameObject);
             }
         }
