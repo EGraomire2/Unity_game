@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9140421783188752995}
   - component: {fileID: 7647585639419155892}
   - component: {fileID: -5608466766738996018}
+  - component: {fileID: -6508327408488533945}
   m_Layer: 0
   m_Name: asteroid_mod_07_low
   m_TagString: Untagged
@@ -102,3 +103,24 @@ MonoBehaviour:
   menuManager: {fileID: 0}
   AsteroidVelocity: 100
   AsteroidRotation: 10
+--- !u!65 &-6508327408488533945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2283208025667075873}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3573137, y: 0.21385032, z: 0.30818763}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -20,7 +20,6 @@ public class ScoreController : MonoBehaviour
         while(true)
         {
             score_total++;
-            print(score_total);
             yield return new WaitForSeconds(0.1f);
         }
     }

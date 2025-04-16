@@ -37,8 +37,10 @@ public class AsteroidController : MonoBehaviour
         }
     }
     private void OnCollisionEnter(Collision collision){
+        print("Collision");
         if (collision.gameObject.tag == "Player"){
-            print("Fin du jeu !");
+            print("game over");
+            menuManager.GetComponent<MenuController>().GameOver();
         }
     }
 }

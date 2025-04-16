@@ -4,11 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    public bool inMenu = false;
+    public bool inMenu;
     public GameObject menuPause;
+    public GameObject gameOver;
 
     public void Start()
     {
+        inMenu = false;
         menuPause.SetActive(false);
     }
 
@@ -25,6 +27,7 @@ public class MenuController : MonoBehaviour
     // Permet de relancer le jeu de 0
     public void RestartGame()
     {
+        inMenu = false;
         SceneManager.LoadScene("game");
     }
 
@@ -37,6 +40,12 @@ public class MenuController : MonoBehaviour
     // Permet de continuer le jeu
     public void ContinueGame()
     {
+        inMenu = false;
         menuPause.SetActive(false);
+    }
+
+    public void GameOver(){
+        inMenu = true;
+        gameOver.SetActive(true);
     }
 }
