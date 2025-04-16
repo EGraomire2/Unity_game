@@ -28,13 +28,13 @@ public class MenuController : MonoBehaviour
     public void RestartGame()
     {
         inMenu = false;
-        SceneManager.LoadScene("game");
+        SceneManager.LoadScene("Game");
     }
 
     // Permet de revenir au menu principal  
     public void QuitGame()
     {
-        SceneManager.LoadScene("menu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     // Permet de continuer le jeu

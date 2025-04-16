@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuManager: {fileID: 0}
   AsteroidVelocity: 100
-  AsteroidRotation: 10
+  AsteroidRotation: 50
 --- !u!65 &-7092768925207069697
 BoxCollider:
   m_ObjectHideFlags: 0
