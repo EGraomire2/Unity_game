@@ -50,48 +50,45 @@ public class EnemySpawner : MonoBehaviour
                 System.Random random = new System.Random();
                 int idAsteroid = random.Next(1, 10); // 1 inclus, 10 exclus => donc 1 à 9 inclus
                 
-                GameObject newAsteroid = null;
                 switch(idAsteroid)
                 {
                     case 1:{                  
-                        newAsteroid = Instantiate(asteroid01, new Vector3((randomPositionX - 0.5f) * 100, (randomPositionY - 0.5f) * 100, 300),
+                        GameObject newAsteroid = Instantiate(asteroid01, new Vector3(randomPositionX - 0.5f * 100, randomPositionY - 0.5f * 100, 100),
                         Quaternion.Euler(randomRotationX * 360, randomRotationY * 360, randomRotationZ * 360));
                         break;}
                     case 2:{
-                        newAsteroid = Instantiate(asteroid02, new Vector3((randomPositionX - 0.5f) * 100, (randomPositionY - 0.5f) * 100, 300),
+                        GameObject newAsteroid = Instantiate(asteroid02, new Vector3(randomPositionX - 0.5f * 100, randomPositionY - 0.5f * 100, 100),
                         Quaternion.Euler(randomRotationX * 360, randomRotationY * 360, randomRotationZ * 360));
                         break;}
                     case 3:{
-                        newAsteroid = Instantiate(asteroid03, new Vector3((randomPositionX - 0.5f) * 100, (randomPositionY - 0.5f) * 100, 300),
+                        GameObject newAsteroid = Instantiate(asteroid03, new Vector3(randomPositionX - 0.5f * 100, randomPositionY - 0.5f * 100, 100),
                         Quaternion.Euler(randomRotationX * 360, randomRotationY * 360, randomRotationZ * 360));
                         break;}
                     case 4:{
-                        newAsteroid = Instantiate(asteroid04, new Vector3((randomPositionX - 0.5f) * 100, (randomPositionY - 0.5f) * 100, 300),
+                        GameObject newAsteroid = Instantiate(asteroid04, new Vector3(randomPositionX - 0.5f * 100, randomPositionY - 0.5f * 100, 100),
                         Quaternion.Euler(randomRotationX * 360, randomRotationY * 360, randomRotationZ * 360));
                         break;}
                     case 5:{
-                        newAsteroid = Instantiate(asteroid05, new Vector3((randomPositionX - 0.5f) * 100, (randomPositionY - 0.5f) * 100, 300),
+                        GameObject newAsteroid = Instantiate(asteroid05, new Vector3(randomPositionX - 0.5f * 100, randomPositionY - 0.5f * 100, 100),
                         Quaternion.Euler(randomRotationX * 360, randomRotationY * 360, randomRotationZ * 360));
                         break;}
                     case 6:{
-                        newAsteroid = Instantiate(asteroid06, new Vector3((randomPositionX - 0.5f) * 100, (randomPositionY - 0.5f) * 100, 300),
+                        GameObject newAsteroid = Instantiate(asteroid06, new Vector3(randomPositionX - 0.5f * 100, randomPositionY - 0.5f * 100, 100),
                         Quaternion.Euler(randomRotationX * 360, randomRotationY * 360, randomRotationZ * 360));
                         break;}
                     case 7:{
-                        newAsteroid = Instantiate(asteroid07, new Vector3((randomPositionX - 0.5f) * 100, (randomPositionY - 0.5f) * 100, 300),
+                        GameObject newAsteroid = Instantiate(asteroid07, new Vector3(randomPositionX - 0.5f * 100, randomPositionY - 0.5f * 100, 100),
                         Quaternion.Euler(randomRotationX * 360, randomRotationY * 360, randomRotationZ * 360));
                         break;}
                     case 8:{
-                        newAsteroid = Instantiate(asteroid08, new Vector3((randomPositionX - 0.5f) * 100, (randomPositionY - 0.5f) * 100, 300),
+                        GameObject newAsteroid = Instantiate(asteroid08, new Vector3(randomPositionX - 0.5f * 100, randomPositionY - 0.5f * 100, 100),
                         Quaternion.Euler(randomRotationX * 360, randomRotationY * 360, randomRotationZ * 360));
                         break;}
                     case 9:{
-                        newAsteroid = Instantiate(asteroid09, new Vector3((randomPositionX - 0.5f) * 100, (randomPositionY - 0.5f) * 100, 300),
+                        GameObject newAsteroid = Instantiate(asteroid09, new Vector3(randomPositionX - 0.5f * 100, randomPositionY - 0.5f * 100, 100),
                         Quaternion.Euler(randomRotationX * 360, randomRotationY * 360, randomRotationZ * 360));
                         break;}
                 } 
-                newAsteroid.GetComponent<AsteroidController>().menuManager = menuManager;
-
                 yield return new WaitForSeconds(effectiveDelay); // Wait for 2 seconds before starting the spawn loop
             }
             yield return null;
