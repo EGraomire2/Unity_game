@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ScoreController : MonoBehaviour
 {
-    public int score_total = 0;
+    public int score_total;
+    public TextMeshProUGUI t;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,7 +17,7 @@ public class ScoreController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        t.text = score_total.ToString();
     }
     IEnumerator Update_Score()
     {
@@ -24,3 +28,4 @@ public class ScoreController : MonoBehaviour
         }
     }
 }
+
